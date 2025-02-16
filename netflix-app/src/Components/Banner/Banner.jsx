@@ -1,7 +1,8 @@
 // import React from 'react'
 import { useEffect, useState } from "react";
-import "./banner.css";
-import axios from "../../util/axios";
+
+import styles from "./banner.module.css";
+import axios from "../../util/Axios";
 import requests from "../../util/requset";
 
 function Banner() {
@@ -16,46 +17,53 @@ function Banner() {
           ]
         );
       } catch (error) {
-        console.log(error);
+        console.warn(error);
       }
     }
-
-    getVideo();
+ getVideo();
   }, []);
   const truncate = (str, n) => {
     return str.length > n ? str.substr(0, n) + "..." : str;
   };
-  console.log(movie);
+
 
   return (
     <>
-      <div
-        className="banner"
-        style={{
-          backgroundImage: `url(https://image.tmdb.org/t/p/original${movie.backdrop_path})`,
+      <div className={styles.header}>
+        <div
+          className={styles.banner}
+          style={{
+            backgroundImage: `url(https://image.tmdb.org/t/p/original${movie.backdrop_path})`,
 
-          backgroundRepeat: "no-repeat",
-          backgroundPosition: "center",
-          backgroundSize: "cover",
-        }}
-      >
-        <div className="banner_content ">
-          <h2>{movie.name || movie.original_nameame}</h2>
+            backgroundRepeat: "no-repeat",
+            backgroundPosition: "center",
+            backgroundSize: "cover",
+          }}
+        >
+          <div className={styles.banner_content}>
+            <h2>{movie.name || movie.original_name || movie.title}</h2>
 
-          <div className="banner_btns">
-            <div className="banner_play_btn">
-              <button className="netflix-btn other">Play</button>
+            <div className={styles.banner_btns}>
+              <div className={styles.banner_play_btn}>
+                <button className={`${styles["netflix-btn"]} ${styles.mylist}  ${styles.active}`}>
+                  Play
+                </button>
+              </div>
+              <div className={styles.btn}>
+                <button
+                  className={`${styles["netflix-btn"]} ${styles.mylist}  $`}
+                >
+                  My List
+                </button>
+              </div>
             </div>
-            <div className="banner_btn_myList ">
-              <button className="netflix-btn mylist">My List</button>
-            </div>{" "}
+            <div className={styles.banner_description}>
+              <p>{truncate(`${movie.overview}`, 150)}</p>
+            </div>
           </div>
-          <div className="banner_description">
-            <p>{truncate(`${movie.overview}`, 170)}</p>
-          </div>
-        </div>
 
-        <div className="banner_fadded">ss</div>
+          <div className={styles.banner_fadded}></div>
+        </div>
       </div>
     </>
   );

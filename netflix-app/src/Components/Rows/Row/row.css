@@ -1,0 +1,44 @@
+.content{
+
+
+    height: 29vh;
+
+    color: #fff;
+   
+}
+
+
+.movies_imgs{
+    display: flex;
+    gap:5px;
+}
+.trending_moveis_img{
+
+
+    height:27vh;
+    object-fit: contain;
+  
+}
+
+
+
+
+
+.trending_moveis_img:hover{
+
+    transform: scale(1.06);
+    cursor: pointer;
+    transition: step-end;
+    transition-duration: 290ms;
+}
+
+.single_movies_img{
+     height:17vh;
+    object-fit: contain;
+}
+.single_movies_img:hover{
+      transform: scale(1.06);
+    cursor: pointer;
+    transition: step-end;
+    transition-duration: 290ms;
+}

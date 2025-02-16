@@ -1,0 +1,149 @@
+.header {
+  margin-bottom: 17px;
+
+  .banner {
+    height: 60vh;
+    width: max(100%, 100vw);
+    position: relative;
+    z-index: 2;
+  }
+
+  .banner_content {
+    /* border: 2px solid red; */
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    width: min(64%);
+    padding-top: 30vh;
+
+    top: 0;
+    gap: 3px;
+    padding-left: 2em;
+    color: white;
+    font-size: 19px;
+    font-weight: bold;
+    z-index: 1;
+    font-family: Lexend, sans-serif;
+    /* font-weight: 700; */
+  }
+
+  .banner_btns {
+    display: flex;
+    gap: 3%;
+    align-items: center;
+    justify-content: flex-start;
+
+    .netflix-btn {
+      background-color: #fefefe;
+      color: black;
+      font-size: 16px;
+      font-weight: bold;
+      border: none;
+      padding: 12px 23px;
+      cursor: pointer;
+      border-radius: 4px;
+      transition: background-color 0.3s ease, transform 0.2s ease;
+    }
+
+    .netflix-btn.mylist {
+      opacity: 0.7;
+    }
+    .active {
+      background: red;
+      opacity: 1;
+    }
+    .netflix-btn:focus {
+      outline: 3px solid transparent;
+    }
+
+    .netflix-btn.mylist:hover {
+      background-color: #fff;
+      transform: scale(1.05);
+
+      opacity: 1;
+    }
+  }
+
+  /* 
+  .actve {
+    opacity: 0.2;
+  }
+ 
+
+
+
+   */
+}
+
+.banner_fadded {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background-image: linear-gradient(
+    transparent,
+    rgba(33, 37, 37, 0.91),
+    rgb(17, 17, 17)
+  );
+  z-index: -1;
+  padding-top: 25vh;
+}
+@media only screen and (min-width: 992px) {
+  ._banner_content {
+    /* border: 2px solid red; */
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    width: min(87%);
+    padding-top: 13vh;
+    position: relative;
+    top: 0;
+    gap: 2px;
+    padding-left: 2em;
+    color: white;
+    font-size: 7px;
+    font-weight: bold;
+  }
+
+  .banner_description {
+    font-size: 30px;
+  }
+  .banner_content h2 {
+    font-size: 40px;
+  }
+}
+
+/* !i will need to cont.. mediaque..  remmber this date 2/26/2025 
+ */
+/* @media  screen and (min-width: 1200px) {
+  .banner_content {
+    display: flex;
+    flex-direction: column;
+
+    width: 500px;
+    padding-top: 8vh;
+    position: relative;
+    top: 0;
+    gap: 3px;
+    padding-left: 2em;
+    color: white;
+    font-size: 19px;
+  }
+  .banner_description {
+    font-size: 34px;
+  }
+  .banner_content h2 {
+    font-size: 40px;
+  }
+
+  .header .banner {
+    display: flex;
+    width: 90%;
+    justify-content: center;
+    align-items: center;
+    margin: 0 auto;
+  flex-wrap: wrap;
+  
+  
+  }
+} */

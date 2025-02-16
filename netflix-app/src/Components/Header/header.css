@@ -1,96 +1,131 @@
-/* mine css .header_outer_container {
-  position: sticky;
-  top: 0;
-  display: flex;
-  justify-content: center;
-  align-content: center;
-  background-color: rgb(121, 110, 110);
-  background-color: transparent;
-  height: 10vh;
+.navbar {
+ 
+  width: 100%;
   color: white;
-  transition: all 0.5s;
-  transition-timing-function: ease-in;
-  border-bottom: 0.5px solid  rgb(70, 63, 63);
+  position: fixed;
 
-  z-index: 1;
+  top: 0;
+  z-index: 900;
+background: linear-gradient(to top, transparent 0%, rgba(22, 22, 22, 0.712));
+  font-size: 15px;
+
+ 
 }
+ .scrolled {
+     background-color: black;}
 
-.header_container {
+.container {
+ 
   width: 90%;
   margin: 0 auto;
   display: flex;
   justify-content: space-between;
-
   align-items: center;
-   border: 1px solid green; 
+  padding: 2px;
 
-
-.header_container ul {
-  display: flex;
-  justify-content: space-around;
-  width: 140%;
-  justify-content: space;
-  align-items: center;
-
-  text-decoration: none;
-  list-style-type: none;
-} */
-.header_outer_container {
-  width: 100%;
-  background-color: black;
-  display: flex;
-  justify-content: center;
-  padding: 10px 0;
-}
-
-.header_container {
-  width: 90%;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-}
-
-.header_left ul,
-.header_right ul {
-  list-style: none;
-  display: flex;
-  align-items: center;
-  padding: 0;
-  margin: 0;
-}
-
-.header_left ul li,
-.header_right ul li {
-  color: white;
-  margin: 0 15px;
-  font-size: 16px;
-  cursor: pointer;
-  transition: color 0.3s ease-in-out;
-}
-
-.header_left ul li:hover,
-.header_right ul li:hover {
-  color: #e50914; /* Netflix Red */
-}
-
-.header_left ul li img {
-  display: block;
-  width: 100px;
-}
-
-@media (max-width: 768px) {
-  .header_container {
-    flex-direction: column;
-  }
-
-  .header_left ul,
-  .header_right ul {
-    flex-direction: column;
+  .left {
+    display: flex;
     align-items: center;
   }
 
-  .header_left ul li,
-  .header_right ul li {
-    margin: 10px 0;
+  img {
+    height: 60px;
+    margin-right: 40px;
   }
+
+  span {
+    margin-right: 32px;
+
+    cursor: pointer;
+  }
+
+  .right {
+    display: flex;
+    align-items: center;
+    flex-direction: end;
+
+    .icons {
+      margin: 0px 20px;
+      cursor: pointer;
+    }
+
+    .profile {
+      .options {
+        display: none;
+        flex-direction: column;
+        background-color: rgb(44, 39, 39);
+        border-radius: 5px;
+        /* display: flex; */
+        flex: 0 0 auto;
+      }
+    }
+
+    span {
+      padding: 10px;
+      cursor: pointer;
+      flex-wrap: wrap;
+    }
+    &:hover {
+      .options {
+        display: flex;
+        flex-direction: column;
+        background-color: rgb(44, 39, 39);
+        border-radius: 5px;
+        /* display: flex; */
+        flex: 0 0 auto;
+        flex-wrap: wrap;
+        position: absolute;
+      }
+    }
+  }
+}
+
+@media only screen and (max-width: 544px) {
+
+  
+
+ .container {
+ 
+ display: flex;
+
+
+.left {
+  span{
+    display: none;
+  }
+}
+.right nextchild{
+ 
+
+}
+}
+
+.profile {
+ display: block;
+      .options {
+        display: none;
+        flex-direction: column;
+        background-color: rgb(44, 39, 39);
+        border-radius: 5px;
+        /* display: flex; */
+        flex: 0 0 auto;
+      }
+    }
+}
+
+
+
+@media only screen and (min-width: 990px) {
+
+ 
+
+.container{
+
+  img {
+    height: 80px;
+    margin-right: 40px;
+  }
+
+}
+  
 }
