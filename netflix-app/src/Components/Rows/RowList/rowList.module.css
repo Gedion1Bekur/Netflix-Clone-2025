@@ -1,0 +1,14 @@
+.row_cotainer{
+
+/* padding: 2px; */
+/* display: flex; */
+
+
+/* display: flex; */
+justify-items: start;
+align-items: center;
+flex-wrap: wrap;
+/* border: 2px solid red; */
+
+padding-left: 10px;
+}

@@ -41,7 +41,7 @@ function Banner() {
           }}
         >
           <div className={styles.banner_content}>
-            <h2>{movie.name || movie.original_name || movie.title}</h2>
+            <h2>{movie?.name || movie?.original_name || movie?.title}</h2>
 
             <div className={styles.banner_btns}>
               <div className={styles.banner_play_btn}>
@@ -58,7 +58,7 @@ function Banner() {
               </div>
             </div>
             <div className={styles.banner_description}>
-              <p>{truncate(`${movie.overview}`, 150)}</p>
+              <p>{truncate(`${movie?.overview}`, 160)}</p>
             </div>
           </div>
 

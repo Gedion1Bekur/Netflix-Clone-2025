@@ -19,10 +19,14 @@
     "dotenv": "^16.4.7",
     "env": "^0.0.2",
     "global": "^4.4.0",
+    "movie-trailer": "^3.2.2",
     "react": "^19.0.0",
     "react-bootstrap": "^2.10.9",
     "react-dom": "^19.0.0",
-    "vite-plugin-env-compatible": "^2.0.1"
+    "react-favicon": "^2.0.7",
+    "react-youtube": "^10.1.0",
+    "vite-plugin-env-compatible": "^2.0.1",
+    "youtube": "^0.1.0"
   },
   "devDependencies": {
     "@eslint/js": "^9.19.0",

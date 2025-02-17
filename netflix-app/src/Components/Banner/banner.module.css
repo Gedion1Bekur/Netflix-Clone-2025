@@ -1,9 +1,9 @@
 .header {
-  margin-bottom: 17px;
+  /* margin-bottom: 10px; */
 
   .banner {
-    height: 60vh;
-    width: max(100%, 100vw);
+    height: 64vh;
+    width: min(100%, 100vw);
     position: relative;
     z-index: 2;
   }
@@ -14,7 +14,7 @@
     flex-direction: column;
     flex-wrap: wrap;
     width: min(64%);
-    padding-top: 30vh;
+    padding-top: 25vh;
 
     top: 0;
     gap: 3px;
@@ -88,6 +88,31 @@
   z-index: -1;
   padding-top: 25vh;
 }
+
+@media only screen and (max-width: 400px) {
+
+    .banner_content {
+      
+      
+        display: flex;
+        flex-direction: column;
+        flex-wrap: wrap;
+        width: min(64%);
+        padding-top: 18vh;
+        top: 0;
+        gap: 3px;
+        padding-left: 2em;
+        color: white;
+        font-size: 10px;
+        font-weight: bold;
+        z-index: 1;
+        font-family: Lexend, sans-serif;
+      
+    }
+
+
+
+}
 @media only screen and (min-width: 992px) {
   ._banner_content {
     /* border: 2px solid red; */
@@ -113,8 +138,18 @@
   }
 }
 
+@media screen and (min-width: 1201px) {
+  .banner {
+    height: 139vh;
+    width: min(100%, 100vw);
+    position: relative;
+    z-index: 2;
+
+
+  }
+}
+
 /* !i will need to cont.. mediaque..  remmber this date 2/26/2025 
- */
 /* @media  screen and (min-width: 1200px) {
   .banner_content {
     display: flex;

@@ -1,8 +1,9 @@
 .footer_outer_container {
-  background-color: #111;
+  background-color: black;
   color: grey;
   display: flex;
   justify-content: center;
+
   /* border: 1px solid red;  test case*/
 }
 .footer_inner_contanier {
@@ -45,4 +46,14 @@
 .copy_write{
     font-size: 12px;
     margin-bottom: 10px;
+}
+
+@media screen and (min-width:768px){
+  .footer_data ul {
+    list-style-type: none;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+ 
+}
 }
