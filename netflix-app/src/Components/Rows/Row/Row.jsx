@@ -3,6 +3,8 @@ import { useEffect, useState } from "react";
 import styles from "./row.module.css"
 import axios from '../../../util/Axios'
 
+import PropTypes from 'prop-types'
+
 import movieTrailer from "movie-trailer";
 import YouTube from "react-youtube";
 
@@ -109,4 +111,16 @@ function Row({ fetchUrl, title, isLarge }) {
   );
 }
 
+Row.propTypes = {
+  fetchUrl: PropTypes.string,
+  title: PropTypes.string,
+   isLarge: PropTypes.string,
+ 
+};
+
+
 export default Row;
+
+
+
+
